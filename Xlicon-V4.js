@@ -375,7 +375,7 @@ caption: `${dgxeon + xeontext1}`,
 
         //premium
         async function replyprem(teks) {
-    replygcXlicon(`This feature is for premium user, contact the owner to become premium user`)
+    replygcXlicon(`Access Denied. Not a premium user.`)
 }
         //script replier
         async function sendXliconBotIncMessage(chatId, message, options = {}){
@@ -702,7 +702,7 @@ return build_server + data.image
 
 //autoreact
 const xliconreact = async () => {
-  const emojis = ["🌷", "🤙", "😂", "🤣", "😭", "🫂", "💔", "😡"]; 
+  const emojis = ["🌷", "🌨️", "😂", "🤣", "😭", "🫂", "💔", "⚡"]; 
   for (const emoji of emojis) {
     await sleep(80);
     XliconBotInc.sendMessage(m.chat, { react: { text: emoji, key: m.key }});
@@ -714,12 +714,12 @@ const xliconreact = async () => {
 //bug loading
 async function loading () {
 var xeonlod = [
-"《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
-"《 ████▒▒▒▒▒▒▒▒》30%",
-"《 ███████▒▒▒▒▒》50%",
-"《 ██████████▒▒》80%",
-"《 ████████████》100%",
-"𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🦄..."
+"█▒▒▒▒▒▒▒▒▒▒▒ 10%",
+"████▒▒▒▒▒▒▒▒ 30%",
+"███████▒▒▒▒▒ 50%",
+"██████████▒▒ 80%",
+"████████████ 100%",
+"𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 ⚙️"
 ]
 let { key } = await XliconBotInc.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
 
@@ -730,7 +730,7 @@ await XliconBotInc.sendMessage(from, {text: xeonlod[i], edit: key })
 
 const xliconimun = (texto) => {
 XliconBotInc.sendMessage(from, { text: texto, mentions: [sender]}, {quoted: m }).catch(e => {
-return m.reply("Erro..")
+return m.reply("Error!")
 })
 }
 
@@ -811,7 +811,7 @@ async function styletext(teks) {
         
         async function Telesticker(url) {
     return new Promise(async (resolve, reject) => {
-        if (!url.match(/(https:\/\/t.me\/addstickers\/)/gi)) return replygcXlicon('Enther your url telegram sticker link')
+        if (!url.match(/(https:\/\/t.me\/addstickers\/)/gi)) return replygcXlicon('Enter Tele Sfw url')
         packName = url.replace("https://t.me/addstickers/", "")
         data = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, {method: "GET",headers: {"User-Agent": "GoogleBot"}})
         const xeonyresult = []
@@ -864,13 +864,13 @@ function formatDuration(ms) {
         // Grup Only
         if (!m.isGroup && !XeonTheCreator && db.data.settings[botNumber].onlygrub ) {
         	if (isCommand){
-            return replygcXlicon(`Hello buddy! Because We Want to Reduce Spam, Please Use Bot in the Group Chat !\n\nIf you have issue please chat owner wa.me/${ownernumber}`)
+            return replygcXlicon(`Access Denied. Set to Group only. \n\n Contact wa.me/${ownernumber} for more info.`)
             }
         }
         // Private Only
         if (!XeonTheCreator && db.data.settings[botNumber].onlypc && m.isGroup) {
         	if (isCommand){
-	         return replygcXlicon("Hello buddy! if you want to use this bot, please chat the bot in private chat")
+	         return replygcXlicon("Access Denied. Set to Private chat only.")
 	     }
 	}
 	     
@@ -887,7 +887,7 @@ function formatDuration(ms) {
         }
         //auto set bio\\
 	if (db.data.settings[botNumber].autobio) {
-            XliconBotInc.updateProfileStatus(`${botname} Have Been Running For ${runtime(process.uptime())}`).catch(_ => _)
+            XliconBotInc.updateProfileStatus(`${botname} Running ⚙️. Runtime : ${runtime(process.uptime())}`).catch(_ => _)
         }
      //auto type record
         if (db.data.settings[botNumber].autorecordtype){
@@ -923,7 +923,7 @@ function formatDuration(ms) {
         } 
         if (!m.sender.startsWith(`${antiforeignnumber}`) && db.data.chats[m.chat].antiforeignnum === true){ 
         	if (XeonTheCreator || isAdmins || !isBotAdmins) return
-            XliconBotInc.sendMessage(m.chat, { text: `Sorry buddy! you will be removed because the group admin/owner has enabled anti foreign number, only +${antiforeignnumber} country code is allowed to join the group` }, {quoted: m})
+            XliconBotInc.sendMessage(m.chat, { text: `Foreign number detected! Processing..⚙️` }, {quoted: m})
             await sleep(2000)
             await XliconBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
@@ -973,7 +973,7 @@ XliconBotInc.sendMessage(m.chat,
 			            participant: m.key.participant
 			        }
 			    })
-XliconBotInc.sendMessage(from, {text:`\`\`\`「 Promotion Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} has sent a promotion message and successfully deleted`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+XliconBotInc.sendMessage(from, {text:`\`\`\`「 Promotion Detected 」\`\`\`\n\n Processing..⚙️`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 }
 }
 
@@ -987,7 +987,7 @@ if (!isBotAdmins) return
 if(XeonTheCreator) return
 XliconBotInc.groupParticipantsUpdate(from, [sender], 'remove')
 await XliconBotInc.sendMessage(from, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
-XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me/${sender.split("@")[0]} Detected Having Sent Virtex ${isGroup?`in ${groupName}`:''}`})
+XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Bro !! wa.me/${sender.split("@")[0]} Sent Virtex ${isGroup?`in ${groupName}`:''}`})
  }
  }
  
@@ -995,7 +995,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if (m.isBaileys && m.fromMe == false){
         if (isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`*Another Bot Detected*\n\nHusshhh Get away from this group!!!`)
+          replygcXlicon(`*Bots Detected!*\n\nProcessing..⚙️`)
     return await XliconBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
     }
@@ -1005,7 +1005,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
         if (db.data.chats[m.chat].antimedia && isMedia) {
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Media Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-media for this group`)
+          replygcXlicon(`\`\`\`「 Media Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
   }
@@ -1013,7 +1013,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "imageMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Image Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-image for this group`)
+          replygcXlicon(`\`\`\`「 Image Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1022,7 +1022,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "videoMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Video Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-video for this group`)
+          replygcXlicon(`\`\`\`「 Video Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1031,7 +1031,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "stickerMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Sticker Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-sticker for this group`)
+          replygcXlicon(`\`\`\`「 Sticker Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1040,7 +1040,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "audioMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Audio Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-audio for this group`)
+          replygcXlicon(`\`\`\`「 Audio Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1049,7 +1049,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "pollCreationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Poll Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-poll for this group`)
+          replygcXlicon(`\`\`\`「 Poll Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1058,7 +1058,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "locationMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Location Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-location for this group`)
+          replygcXlicon(`\`\`\`「 Location Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1067,7 +1067,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "documentMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Document Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-document for this group`)
+          replygcXlicon(`\`\`\`「 Document Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1076,7 +1076,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
     if(isXeonMedia === "contactMessage"){
         if (XeonTheCreator || isAdmins || !isBotAdmins){		  
         } else {
-          replygcXlicon(`\`\`\`「 Contact Detected 」\`\`\`\n\nSorry, but I have to delete it, because the admin/owner has activated anti-contact for this group`)
+          replygcXlicon(`\`\`\`「 Contact Detected 」\`\`\`\n\nProcessing..⚙️`)
     return XliconBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
         }
     }
@@ -1095,7 +1095,7 @@ XliconBotInc.sendMessage(`${ownernumber}@s.whatsapp.net`,{text: `Hi Owner! wa.me
 			            participant: m.key.participant
 			        }
 			    })
-			XliconBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} was using harsh words and his chat has been deleted`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+			XliconBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\nProcessing..⚙️`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
                }
             }
         }
@@ -1144,7 +1144,7 @@ await XliconBotInc.sendMessage(m.chat, { react: { text: "✖️",key: m.key,}})
         
         if (db.data.chats[m.chat].antilinkgc) {
             if (budy.match(`chat.whatsapp.com`)) {
-               bvl = `\`\`\`「 GC Link Detected 」\`\`\`\n\nAdmin has sent a gc link, admin is free to send any link😇`
+               bvl = `\`\`\`「 GC Link Detected 」\`\`\`\n\n Sender [Administrator] Access Granted 🟩`
 if (isAdmins) return replygcXlicon(bvl)
 if (m.key.fromMe) return replygcXlicon(bvl)
 if (XeonTheCreator) return replygcXlicon(bvl)
@@ -1157,12 +1157,12 @@ if (XeonTheCreator) return replygcXlicon(bvl)
 			            participant: m.key.participant
 			        }
 			    })
-			XliconBotInc.sendMessage(from, {text:`\`\`\`「 GC Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} has sent a link and successfully deleted`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+			XliconBotInc.sendMessage(from, {text:`\`\`\`「 GC Link Detected 」\`\`\`\n\nProcessing..⚙️`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
             }
         }
         if (db.data.chats[m.chat].antilink) {
             if (budy.match('http') && budy.match('https')) {
-               bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to send any link😇`
+               bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nSender [Administrator] Access Granted 🟩`
 if (isAdmins) return replygcXlicon(bvl)
 if (m.key.fromMe) return replygcXlicon(bvl)
 if (XeonTheCreator) return replygcXlicon(bvl)
@@ -1175,7 +1175,7 @@ if (XeonTheCreator) return replygcXlicon(bvl)
 			            participant: m.key.participant
 			        }
 			    })
-			XliconBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} has sent a link and successfully deleted`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+			XliconBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\nProcessing..⚙️`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
             }
         }
         //afk
@@ -1186,11 +1186,11 @@ if (XeonTheCreator) return replygcXlicon(bvl)
             let afkTime = user.afkTime
             if (!afkTime || afkTime < 0) continue
             let reason = user.afkReason || ''
-            replygcXlicon(`Please Don't Tag Him\nHe's AFK ${reason ? 'With reason ' + reason : 'no reason'}\nAfk Since ${clockString(new Date - afkTime)}`.trim())
+            replygcXlicon(`User Away From Keys\n${reason ? 'With reason ' + reason : 'no reason'}\nAfk Since ${clockString(new Date - afkTime)}`.trim())
         }
         if (db.data.users[m.sender].afkTime > -1) {
             let user = global.db.data.users[m.sender]
-            replygcXlicon(`You Have Returned From AFK\nAFK Reason: ${user.afkReason ? user.afkReason : ''}\nAFK Duration: ${clockString(new Date - user.afkTime)}`.trim())
+            replygcXlicon(`Returned to keys!\nAFK Reason: ${user.afkReason ? user.afkReason : ''}\nAFK Duration: ${clockString(new Date - user.afkTime)}`.trim())
             user.afkTime = -1
             user.afkReason = ''
         }
@@ -1212,13 +1212,13 @@ const xeonfeature = () =>{
         let imageCaption = quotedMessage.imageMessage.caption;
         let imageUrl = await XliconBotInc.downloadAndSaveMediaMessage(quotedMessage.imageMessage);
         XliconBotInc.sendMessage(m.chat, { image: { url: imageUrl }, caption: imageCaption });
-        replygcXlicon('*Downloading status...*');
+        replygcXlicon('*Downloading status..*');
       }
       if (quotedMessage.videoMessage) {
         let videoCaption = quotedMessage.videoMessage.caption;
         let videoUrl = await XliconBotInc.downloadAndSaveMediaMessage(quotedMessage.videoMessage);
         XliconBotInc.sendMessage(m.chat, { video: { url: videoUrl }, caption: videoCaption });
-        replygcXlicon('*Downloading status...*');
+        replygcXlicon('*Downloading status..*');
       }
     }
   }
@@ -1355,7 +1355,7 @@ if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             let isTie = !1
             let isSurrender = !1
             // replygcXlicon(`[DEBUG]\n${parseInt(m.text)}`)
-            if (!/^([1-9]|(me)?giveup|surr?ender|off|skip)$/i.test(m.text)) return
+            if (!/^([1-9]|(me)?giveup|surrender|off|skip)$/i.test(m.text)) return
             isSurrender = !/^[1-9]$/.test(m.text)
             if (m.sender !== room.game.currentTurn) {
                 if (!isSurrender) return !0
@@ -1687,7 +1687,7 @@ break
                if (args.length < 1) return replygcXlicon( `Send commands ${prefix}addbadword [bad word]. Example ${prefix}addbadword asshole`)                 
                bad.splice(q)
                fs.writeFileSync('./src/data/function/badword.json', JSON.stringify(bad))
-               replygcXlicon('Successfully Deleted Bad Word!')
+               replygcXlicon('Bad word +1 Set Success!')
             break 
             case 'resetuser':
             case 'resetdbuser': {
@@ -1719,7 +1719,7 @@ break
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below`
+            text: `Greetings ${pushname}\nClick the button below.`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -1735,8 +1735,8 @@ break
             buttons: [
               {
                 "name": "single_select",
-                "buttonParamsJson": `{"title":"SELECT MENU 🗂️",
-"sections":[{"title":"SELECT THE MENU BELOW",
+                "buttonParamsJson": `{"title":"Menu ⚙️",
+"sections":[{"title":"All Menu",
 "highlight_label":"OWNER'S FAVOURITE",
 "rows":[{"header":"BUTTON + CHANNEL V2",
 "title":"CHOOSE ",
@@ -1845,8 +1845,8 @@ break
             buttons: [
               {
                 "name": "single_select",
-                "buttonParamsJson": `{"title":"SELECT REPLY 🐛",
-"sections":[{"title":"SELECT THE REPLY BELOW",
+                "buttonParamsJson": `{"title":"Reply ⚙️",
+"sections":[{"title":"All Replies",
 "highlight_label":"OWNER'S FAVOURITE",
 "rows":[{"header":"CHANNEL + LINK THUMB",
 "title":"CHOOSE ",
@@ -2025,10 +2025,10 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
                     for (let i = 0; i < m.mentionedJid.length; i++) {
                         addPremiumUser(m.mentionedJid[0], args[1], premium)
                     }
-                    replygcXlicon("Premium Success")
+                    replygcXlicon("Premium Success 💠")
                 } else {
                     addPremiumUser(args[0] + "@s.whatsapp.net", args[1], premium)
-                    replygcXlicon("Premium Success")
+                    replygcXlicon("Premium Success 💠")
                 }
             break
             case 'delprem':
@@ -2039,20 +2039,20 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
                         premium.splice(getPremiumPosition(m.mentionedJid[i], premium), 1)
                         fs.writeFileSync("./src/data/role/premium.json", JSON.stringify(premium))
                     }
-                    replygcXlicon("Delete Success")
+                    replygcXlicon("DelPrem 🔷 Success")
                 } else {
                     premium.splice(getPremiumPosition(args[0] + "@s.whatsapp.net", premium), 1)
                     fs.writeFileSync("./src/data/role/premium.json", JSON.stringify(premium))
-                    replygcXlicon("Delete Success")
+                    replygcXlicon("DelPrem 🔷 Success")
                 }
             break
             case 'listprem': {
                 if (!XeonTheCreator) return XliconStickOwner()
                 let data = require('./src/data/role/premium.json')
-                let txt = `*------「 LIST PREMIUM 」------*\n\n`
+                let txt = `*------「 List Premium 」------*\n\n`
                 for (let x of data) {
                     txt += `Number : ${x.id}\n`
-                    txt += `Expire In: ${x.expired} ms\n`
+                    txt += `Expires In: ${x.expired} ms\n`
                 XliconBotInc.sendMessage(m.chat, {
                     text: txt,
                     mentions: x
@@ -2067,10 +2067,10 @@ if (!XeonTheCreator) return XliconStickOwner()
 if (!args[0]) return replygcXlicon(`Use ${prefix+command} number\nExample ${prefix+command} ${ownernumber}`)
 bnnd = q.split("|")[0].replace(/[^0-9]/g, '')
 let ceknye = await XliconBotInc.onWhatsApp(bnnd)
-if (ceknye.length == 0) return replygcXlicon(`Enter A Valid And Registered Number On WhatsApp!!!`)
+if (ceknye.length == 0) return replygcXlicon(`Enter A Valid And Registered Number On WhatsApp.`)
 owner.push(bnnd)
 fs.writeFileSync('./src/data/role/owner.json', JSON.stringify(owner))
-replygcXlicon(`Number ${bnnd} Has Become An Owner!!!`)
+replygcXlicon(`${bnnd} is now a substitute owner.`)
 break
 case 'delowner':
 if (!XeonTheCreator) return XliconStickOwner()
@@ -2079,7 +2079,7 @@ ya = q.split("|")[0].replace(/[^0-9]/g, '')
 unp = owner.indexOf(ya)
 owner.splice(unp, 1)
 fs.writeFileSync('./src/data/role/owner.json', JSON.stringify(owner))
-replygcXlicon(`The Numbrr ${ya} Has been deleted from owner list by the owner!!!`)
+replygcXlicon(`${ya} is no longer an owner.`)
 break
 case 'listowner': {
                 let teks = '┌──⭓「 *List Owner* 」\n│\n'
@@ -2114,7 +2114,7 @@ case 'listowner': {
                         fs.unlinkSync(`./session/${file}`)
                     });
                     await sleep(2000)
-                    replygcXlicon("Successfully deleted all the trash in the session folder")
+                    replygcXlicon("Trash Cleared 🚮")
                 });
             }
             break
@@ -2125,14 +2125,14 @@ case 'listowner': {
                     if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return replygcXlicon('Link Invalid!')
                     let result = args[0].split('https://chat.whatsapp.com/')[1]
                     XliconBotInc.groupAcceptInvite(result)
-                    await replygcXlicon(`Done`)
+                    await replygcXlicon(`Joined Success.`)
                 } catch {
                     replygcXlicon('Failed to join the Group')
                 }
                 break
             case 'getsession':
                 if (!XeonTheCreator) return XliconStickOwner()
-                replygcXlicon('Wait a moment, currently retrieving your session file')
+                replygcXlicon('Wait a moment, retrieving your session file')
                 let sesi = fs.readFileSync('./session/creds.json')
                 XliconBotInc.sendMessage(m.chat, {
                     document: sesi,
@@ -2152,7 +2152,7 @@ case 'listowner': {
                     'path': '/'
                 }, function(resp) {
                     resp.on('data', function(ip) {
-                        replygcXlicon("🔎 My public IP address is: " + ip);
+                        replygcXlicon("Internet Protocol  " + ip);
                     })
                 })
             break
