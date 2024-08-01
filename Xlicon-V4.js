@@ -2164,7 +2164,7 @@ case 'listowner': {
             teks1 = `\n\n*User* : @${
    m.sender.split("@")[0]
   }\n*Request/Bug* : ${text}`
-            teks2 = `\n\n*Hii ${pushname},You request has been forwarded to my Owners*.\n*Please wait...*`
+            teks2 = `\n\n* ${pushname},You request has been forwarded to my Owners*.\n*Please wait...*`
             for (let i of owner) {
                 XliconBotInc.sendMessage(i + "@s.whatsapp.net", {
                     text: textt + teks1,
@@ -2184,7 +2184,7 @@ case 'listowner': {
         break
             case 'shutdown':
                 if (!XeonTheCreator) return XliconStickOwner()
-                replygcXlicon(`Restarting will be completed in seconds`)
+                replygcXlicon(`Shutting Down ⭕`)
                 await sleep(3000)
                 process.exit()
             break
@@ -2206,7 +2206,7 @@ case 'listowner': {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button bw to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2277,7 +2277,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2349,7 +2349,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2565,7 +2565,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2709,7 +2709,7 @@ if (!XeonTheCreator) return XliconStickOwner()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2781,7 +2781,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2854,7 +2854,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -2927,7 +2927,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3000,7 +3000,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3144,7 +3144,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nCick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3266,7 +3266,7 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             case 'out':
                 if (!XeonTheCreator) return XliconStickOwner()
                 if (!m.isGroup) return XliconStickGroup()
-                replygcXlicon('Bye Everyone 🥺')
+                replygcXlicon('⚙️ Leaving ..')
                 await XliconBotInc.groupLeave(m.chat)
             break
             case 'bc':
@@ -3299,8 +3299,8 @@ await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             break
             case 'jpm': case 'post': {
 if (!XeonTheCreator) return XliconStickOwner()
-if (!text) return replygcXlicon(`*Incorrect Usage Please Use Like This*\n${prefix+command} text|pause\n\nReply Image To Send Images to All Groups\nFor a pause, 1000 = 1 second\n\nExample: ${prefix + command} hello|9000`)
-await replygcXlicon(`Waiting in progress`)
+if (!text) return replygcXlicon(`*Incorrect Usage. refer to the Syntax: *\n${prefix+command} text|pause\n\nReply Image To Send Images to All Groups\nFor a pause, 1000 = 1 second\n\nExample: ${prefix + command} hello|9000`)
+await replygcXlicon(`Waiting for progress`)
 let getGroups = await XliconBotInc.groupFetchAllParticipating()
 let groups = Object.entries(getGroups).slice(0).map((entry) => entry[1])
 let anu = groups.map((v) => v.id)
@@ -3333,7 +3333,7 @@ break
       break
 case "pushcontactv2":{
 if (!XeonTheCreator) return XliconStickOwner()
-if (!q) return replygcXlicon(`Incorrect Usage Please Use Command Like This\n${prefix+command} idgc|text`)
+if (!q) return replygcXlicon(`Incorrect Usage. refer to the Syntax: \n${prefix+command} idgc|text`)
 await XliconStickWait()
 const metadata2 = await XliconBotInc.groupMetadata(q.split("|")[0])
 const halss = metadata2.participants
@@ -3378,14 +3378,14 @@ case 'block': case 'ban': {
 		if (!XeonTheCreator) return XliconStickOwner()
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await XliconBotInc.updateBlockStatus(users, 'block')
-		await replygcXlicon(`Done`)
+		await replygcXlicon(`Blocked🔒.`)
 	}
 	break
 	case 'unblock': case 'unban': {
 		if (!XeonTheCreator) return XliconStickOwner()
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await XliconBotInc.updateBlockStatus(users, 'unblock')
-		await replygcXlicon(`Done`)
+		await replygcXlicon(`Unblocked🔓.`)
 	}
 	break
             case 'bcgc':
@@ -3451,7 +3451,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3524,20 +3524,20 @@ if (args[0] === "on") {
 if (AntiNsfw) return replygcXlicon('Already activated')
 ntnsfw.push(from)
 fs.writeFileSync('./src/data/function/nsfw.json', JSON.stringify(ntnsfw))
-replygcXlicon('Success in turning on nsfw in this group')
+replygcXlicon('Nsfw Turned *ON* ')
 var groupe = await XliconBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XliconBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XliconBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) has been enabled, sexual content might be accessed.`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return replygcXlicon('Already deactivated')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
 fs.writeFileSync('./src/data/function/nsfw.json', JSON.stringify(ntnsfw))
-replygcXlicon('Success in turning off nsfw in this group')
+replygcXlicon('Nsfw Turned *OFF*')
 } else {
                 	let msg = generateWAMessageFromContent(from, {
   viewOnceMessage: {
@@ -3548,7 +3548,7 @@ replygcXlicon('Success in turning off nsfw in this group')
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3647,7 +3647,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Grestings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3891,7 +3891,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -3966,7 +3966,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nCick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4041,7 +4041,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4283,7 +4283,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4358,7 +4358,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4433,7 +4433,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4508,7 +4508,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4583,7 +4583,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4657,7 +4657,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Grestings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4731,7 +4731,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4805,7 +4805,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4879,7 +4879,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -4953,7 +4953,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetimgs ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -5026,7 +5026,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -5099,7 +5099,7 @@ if (!isAdmins && !XeonTheCreator) return XliconStickAdmin()
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${pushname}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Greetings ${pushname}\nClick on the button below to use _*${command}*_ command`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -5183,7 +5183,7 @@ break
                 replygcXlicon(`Close time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = m.participant
-                    const close = `*Close time* group closed by admin\nnow only admin can send messages`
+                    const close = `*Close time* group closed by admin\nOnly admin can send messages`
                     XliconBotInc.groupSettingUpdate(m.chat, 'announcement')
                     replygcXlicon(close)
                 }, timer)
@@ -5206,7 +5206,7 @@ break
                 replygcXlicon(`Open time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = m.participant
-                    const open = `*Open time* the group was opened by admin\n now members can send messages`
+                    const open = `*Open time* the group was opened by admin\nAll participants can send messages`
                     XliconBotInc.groupSettingUpdate(m.chat, 'not_announcement')
                     replygcXlicon(open)
                 }, timer)
